@@ -1,0 +1,17 @@
+{
+  "name": "bluechain_ssi",
+  "version": "0.1.0",
+  "description": "Self-Sovereign Identity implementation of Bluechain Social Cooperative Enterprise, Greece.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test_everything"
+  },
+  "author": "D. Sfounis",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "web3": "^1.3.4"
+  }
+}
