@@ -1,3 +1,4 @@
+![Travis CI badge](https://travis-ci.com/d-sfounis/bluechain_SSI.svg?branch=main)
 # Bluechain Self Sovereign Identity
 European Self Sovereign Identity solution on public blockchain infrastructure.
 
