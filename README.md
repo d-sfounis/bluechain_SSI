@@ -1,5 +1,5 @@
-# bluechain_SSI
-Bluechain Identity - European Self Sovereign Identity solution on public blockchain infrastructure.
+# Bluechain Self Sovereign Identity
+European Self Sovereign Identity solution on public blockchain infrastructure.
 
 ```
 /* SPDX-License-Identifier: GPL-3.0-or-later
