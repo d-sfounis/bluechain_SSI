@@ -47,6 +47,7 @@ contract PassportManager {
         //All these checks cumulatively mean that a passport has been properly initialized
         if(user_passports_LUT[addr] != address(0)){
             Passport storage p = user_passports[addr];
+            
             if(p.controller != address(0)){
                 return true;
             }
@@ -60,10 +61,12 @@ contract PassportManager {
         //because the RHS creates a memory-struct "Passport" that contains a mapping.
         require(!(hasInitializedPassport(msg.sender)), "Your User Passport is already initialized!");
         Passport storage p = user_passports[msg.sender];
+        
         p.flair_name = nickname;
         p.controller = msg.sender;
         //Mark passport as initialized, and emit the event.
         user_passports_LUT[msg.sender] = msg.sender;
+        
         emit PassportInitialized(user_passports_LUT[msg.sender], msg.sender);
         return (p.flair_name, p.controller);
     }
@@ -73,6 +76,7 @@ contract PassportManager {
         require(hasInitializedPassport(passport_id));
         require(p.controller == msg.sender, "Sender/controller mismatch when accessing passport");
         require(p.identity_files_LUT[id_file] == "", "ID File is already contained in this Passport!");
+        
         p.identity_files_LUT[id_file] = id_file;
         //trust-score == 1 means we've self-added this file and only us do trust it. In other words, this is a new, self-trusted-only doc.
         //#TODO: There's probably a better way to do this other than using magic numbers...
