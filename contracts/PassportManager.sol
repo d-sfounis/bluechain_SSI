@@ -95,7 +95,7 @@ contract PassportManager {
         Passport storage p = user_passports[passport_id];
         require(DocExistsInPassport(p, doc_id), "Document doesn't exist in specified Passport!");
         require(hasInitializedPassport(msg.sender), "You have to have an active Passport yourself to vote on others!");
-        //Everything ok, we found it. Raitse its score by 1.
+        //Everything ok, we found it. Raise its score by 1.
         p.identity_files[doc_id] = p.identity_files[doc_id] + 1;
         return (passport_id, doc_id, p.identity_files[doc_id]);
     }
