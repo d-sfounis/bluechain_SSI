@@ -10,3 +10,7 @@ European Self Sovereign Identity solution on public blockchain infrastructure.
  *      Funded under the European Cohesion Fund's "Vouchers for Innovation" programme.
  */
  ```
+
+# UPDATE: May 2021    
+The technical documentation and usage manual to the Bluechain SSI system is now delivered. You can view and comment on it here:    
+https://bluechain-research-cooperative.gitbook.io/bluechain-identity-documentation/
